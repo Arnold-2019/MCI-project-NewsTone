@@ -1,2 +1,1 @@
-# MCI Project - Team23
-News Tone
+# MCI Project Team23 - News Tone
