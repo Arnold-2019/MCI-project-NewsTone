@@ -1,2 +1,2 @@
-# Master of Computing and Innovation Project - Team23
+# MCI Project - Team23
 News Tone
