@@ -14,13 +14,13 @@ To use the crawler:
         
     Step 4: crawl a web page and store crawled titles in a json file
         $ cd newstone
-        $ scrapy crawl posts -o *file name*.json
+        $ scrapy crawl titlespider -o filename.json
         
-        e.g. $ scrapy crawl posts -o news-title.json
+        e.g. $ scrapy crawl titlespider -o news-title.json
 
 To open a scrapy shell:
 
-    $ scrapy shell *urls*
+    $ scrapy shell ***urls***
     
     e.g. $ scrapy shell https://news.com.au
 
