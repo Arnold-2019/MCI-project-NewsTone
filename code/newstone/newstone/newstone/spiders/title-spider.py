@@ -4,7 +4,7 @@ class NewsSpider(scrapy.Spider):
     name = "titlespider"
 
     start_urls = [
-        'https://web.archive.org/web/20100207225621/http://www.news.com.au/'
+        'https://web.archive.org/web/20200518235514/https://www.news.com.au/'
     ]
 
     def parse(self, response):
