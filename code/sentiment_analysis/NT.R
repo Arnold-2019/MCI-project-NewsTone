@@ -9,7 +9,7 @@ library(textdata)
 library(tidyr)
 
 # import news titles (one-row-per-title)
-my_data <- read_excel("/Users/wangying/Desktop/MCI/RstudioSA/jsontoxls/xls/2019-titles.xls", 
+my_data <- read_excel("/Users/wangying/Team23/code/sentiment_analysis/xlsx/10yr-titles.xlsx", 
                           col_types = c("skip", "text", "text","text", "text", "text"))
 
 # remove NA titles
