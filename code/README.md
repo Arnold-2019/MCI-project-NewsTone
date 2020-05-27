@@ -11,6 +11,7 @@ To use the crawler:
         
     Step 3: you may need to conduct a install operation to make sure every thing is set
         $ pip install scrapy
+
         
     Step 4: crawl a web page and store crawled titles in a json file
         $ cd newstone
