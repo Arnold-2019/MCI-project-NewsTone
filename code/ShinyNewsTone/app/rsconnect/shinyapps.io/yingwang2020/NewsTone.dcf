@@ -1,0 +1,12 @@
+name: NewsTone
+title: NewsTone
+username:
+account: yingwang2020
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2356760
+bundleId: 3190011
+url: https://yingwang2020.shinyapps.io/NewsTone/
+when: 1590477759.51673
+asMultiple: FALSE
+asStatic: FALSE
