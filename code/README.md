@@ -11,16 +11,17 @@ To use the crawler:
         
     Step 3: you may need to conduct a install operation to make sure every thing is set
         $ pip install scrapy
+
         
     Step 4: crawl a web page and store crawled titles in a json file
         $ cd newstone
-        $ scrapy crawl posts -o *file name*.json
+        $ scrapy crawl titlespider -o filename.json
         
-        e.g. $ scrapy crawl posts -o news-title.json
+        e.g. $ scrapy crawl titlespider -o news-title.json
 
 To open a scrapy shell:
 
-    $ scrapy shell *urls*
+    $ scrapy shell ***urls***
     
     e.g. $ scrapy shell https://news.com.au
 
