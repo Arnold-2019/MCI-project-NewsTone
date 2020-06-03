@@ -15,8 +15,6 @@ my_data <- read_excel("/Users/wangying/Team23/code/sentiment_analysis/xlsx/10yr-
 # remove NA titles
 my_data <- my_data[complete.cases(my_data[,5]),]
 my_data
-my_data <- my_data[-which(my_data$title=="40,000 Bonus Points"),]
-my_data
 
 # remove error titles
 # row_index <- which(my_data$title == 'News.com.au Top stories')
