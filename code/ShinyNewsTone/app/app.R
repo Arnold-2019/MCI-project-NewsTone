@@ -76,7 +76,7 @@ server <- function(input, output) {
     tidy_text <- tidy_text[-which(tidy_text$word=="trump"),]
     tidy_text <- tidy_text[-which(tidy_text$word=="bonus"),]
     
-    # plot word frequency barchart (within one month)
+    # plot word frequency barchart
     output$word_freq <- renderPlot({
         m_text <- tidy_text[which(tidy_text$month==input$month & tidy_text$year==input$year),]
         
@@ -94,7 +94,7 @@ server <- function(input, output) {
             labs(y = paste("Word Frequency (", input$month, "-", input$year, ")"),x = "Top10 Words") +
             coord_flip()
     })
-    # plot word cloud (within one month)
+    # plot word cloud
     output$wordcloud <- renderPlot({
         m_text <- tidy_text[which(tidy_text$month==input$month & tidy_text$year==input$year),]
         
