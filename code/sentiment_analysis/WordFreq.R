@@ -20,7 +20,7 @@ tidy_text <- my_data %>%
 tidy_text
 
 # generate monthly data object
-m_text <- tidy_text[which(tidy_text$month==9 & tidy_text$year==2011),]
+m_text <- tidy_text[which(tidy_text$month==4 & tidy_text$year==2015),]
 tidy_text
 tidy_text <- tidy_text[-which(tidy_text$word=="top"),]
 tidy_text <- tidy_text[-which(tidy_text$word=="trump"),]
@@ -47,5 +47,5 @@ m_text %>%
   inner_join(get_sentiments("bing")) %>%
   count(word, sentiment, sort = TRUE) %>%
   acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("red", "blue"),max.words = 150)
+  comparison.cloud(colors = c("red", "turquoise4"),max.words = 120)
   

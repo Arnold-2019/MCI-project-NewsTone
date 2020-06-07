@@ -8,7 +8,8 @@ class NewsSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        date = response.xpath('//tbody/tr[@class="d"]/td[@class="c"]/@title').re('You are here: [0-9][0-9]:[0-9][0-9]:[0-9][0-9] (.*)')
+        date = response.xpath('//tbody/tr[@class="d"]/td[@class="c"]/@title').re(
+            'You are here: [0-9][0-9]:[0-9][0-9]:[0-9][0-9] (.*)')
         date = date[0]
         year = date[8:12]
         month = date[0:3]
