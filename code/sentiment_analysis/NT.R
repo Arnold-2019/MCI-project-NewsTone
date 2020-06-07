@@ -53,17 +53,19 @@ tidy_text %>%
   inner_join(get_sentiments("bing"), by = "word") %>%
   count(date, year, sentiment)
 
+
 # analyze tone by month
 month_tone <- tidy_text %>%
   inner_join(get_sentiments("bing"), by = "word") %>%
   count(month, sentiment) %>%
   spread(sentiment, n, fill = 0) %>%
   mutate(tone = (2.9*positive - negative) / (positive + negative),
-         index = as.numeric(month), wrap = 1)
+         index = as.numeric(month), wrap = "MONTH")
 # plot month analysis results
-ggplot(month_tone, aes(month, tone, fill= 0)) +
-  geom_bar(stat = "identity", show.legend = FALSE) +
+ggplot(month_tone, aes(index, tone, fill= 0)) +
+  geom_bar(stat = "identity", show.legend = FALSE, fill = "steelblue") +
   facet_wrap(~wrap, ncol = 1, scales = "free_x")
+
 
 # analyze tone by day
 day_tone <- tidy_text %>%
@@ -71,11 +73,12 @@ day_tone <- tidy_text %>%
   count(day,sentiment) %>%
   spread(sentiment, n, fill = 0) %>%
   mutate(tone = (2.9*positive - negative) / (positive + negative),
-         index = row_number(), wrap = 1)
+         index = as.numeric(day), wrap = "DAY")
 # plot daily analysis reults 
-ggplot(day_tone, aes(day, tone, fill= 0)) +
-  geom_bar(stat = "identity", show.legend = FALSE) +
+ggplot(day_tone, aes(index, tone, fill= 0)) +
+  geom_bar(stat = "identity", show.legend = FALSE, fill = "steelblue") +
   facet_wrap(~wrap, ncol = 1, scales = "free_x")
+
 
 # analyse the sentiment of each word in 'tidy_text'
 # count rows according to 'date' & 'sentiment' colums
